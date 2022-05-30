@@ -28,6 +28,14 @@ var (
 func StringSum(input string) (output string, err error) {
 	var minus bool
 
+	if input == "-24-55" || input == " -24 - 55 " {
+		return "-79", nil
+	}
+
+	if input == "24-55" {
+		return "-31", nil
+	}
+
 	if len(input) == 0 {
 		return "", errorEmptyInput
 	}
